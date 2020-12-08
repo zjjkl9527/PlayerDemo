@@ -1,8 +1,6 @@
 package com.hhqj.sphereplayerdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -18,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         mSphereSurfaceView = findViewById(R.id.ssv);
         mSpherePlayer = new SpherePlayer(mSphereSurfaceView);
         mSpherePlayer.setEventListener(new SpherePlayer.EventListener() {
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mSpherePlayer.play("rtmp://8.131.75.62/live");
+        mSpherePlayer.play("http://1300574573.vod2.myqcloud.com/8fc94d25vodcq1300574573/dce714e85285890811031082895/2su7nNrn2UAA.mp4");
     }
 
     @Override
